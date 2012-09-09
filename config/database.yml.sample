@@ -1,0 +1,30 @@
+database: &DATABASE
+  adapter: mysql2
+  encoding: utf8
+  host: localhost
+  timeout: 5000
+
+development:
+  <<: *DATABASE
+  database: nearfive_dev
+  username: root
+  password:
+
+production:
+  <<: *DATABASE
+  database: nearfive
+  username:
+  password:
+
+staging:
+  <<: *DATABASE
+  database: nearfive_staging
+  username:
+  password:
+
+test:
+  <<: *DATABASE
+  database: nearfive_test
+  username: root
+  password:
+
