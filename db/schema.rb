@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909103342) do
+ActiveRecord::Schema.define(:version => 20120910083237) do
+
+  create_table "aftership_trackings", :force => true do |t|
+    t.string   "tracking"
+    t.string   "email"
+    t.string   "order_number"
+    t.datetime "add_to_aftership"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "content_chunks", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "link"
+    t.string   "kind"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_position"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
