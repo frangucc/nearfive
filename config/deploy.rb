@@ -5,7 +5,6 @@ set :stages, %w(staging production)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 # Load RVM's capistrano plugin.
-require "rvm/capistrano"
 load "deploy/assets"
 
 set :rvm_ruby_string, 'ruby-1.9.3-p194@jire'
