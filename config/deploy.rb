@@ -71,7 +71,7 @@ end
 
 desc "Run a task on a remote server. cap staging rake:invoke task=blah"  
 # run like: cap staging invoke_rake task=a_certain_task  
-task :invoke_rake do  
+task :invoke_rake do
   run("cd #{deploy_to}/current && /home/deploy/.rvm/gems/ruby-1.9.3-p194@global/bin/rake #{ENV['task']} RAILS_ENV=#{rails_env}")  
 end  
 
@@ -80,7 +80,7 @@ task :symlink_database_and_system_folder do
   run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
 before  "deploy:assets:precompile",     "symlink_database_and_system_folder"
-after   "deploy:setup", "symlink_database_and_system_folder"
+# after   "deploy:setup", "symlink_database_and_system_folder"
 
 ## For delayed_job
 ##after "deploy:stop",    "delayed_job:stop"
