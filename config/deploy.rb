@@ -5,6 +5,7 @@ set :stages, %w(staging production)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 require "rvm/capistrano"
+require 'whenever/capistrano'
 # Load RVM's capistrano plugin.
 load "deploy/assets"
 

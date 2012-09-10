@@ -1,0 +1,15 @@
+development:
+  adapter: amazon
+  api_key: <YOUR AMAZON AWS API KEY>
+  secret_key: <YOUR AMAZON AWS SECRET KEY>
+  development_mode: true
+
+test:
+  adapter: amazon
+  api_key: <YOUR AMAZON AWS API KEY>
+  secret_key: <YOUR AMAZON AWS SECRET KEY>
+
+production:
+  adapter: amazon
+  api_key: <YOUR AMAZON AWS API KEY>
+  secret_key: <YOUR AMAZON AWS SECRET KEY>
