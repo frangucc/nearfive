@@ -80,7 +80,7 @@ end
 task :symlink_database_and_system_folder do
   run "ln -nfs #{shared_path}/config/database.yml #{release_path}/config/database.yml"
 end
-before  "deploy:assets:precompile",     "symlink_database_and_system_folder"
+# before  "deploy:assets:precompile",     "symlink_database_and_system_folder"
 # after   "deploy:setup", "symlink_database_and_system_folder"
 
 ## For delayed_job
