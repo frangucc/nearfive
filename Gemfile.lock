@@ -133,6 +133,7 @@ GEM
       builder (>= 2.1.2)
     highline (1.6.11)
     hike (1.2.1)
+    hominid (3.0.5)
     httparty (0.8.3)
       multi_json (~> 1.0)
       multi_xml
@@ -275,6 +276,9 @@ GEM
     spree_dash (1.2.0)
       httparty (~> 0.8.1)
       spree_core (= 1.2.0)
+    spree_mail_chimp (3.0.2)
+      hominid (~> 3.0.0)
+      spree_core (~> 1.0)
     spree_promo (1.2.0)
       spree_core (= 1.2.0)
     spree_sample (1.2.0)
@@ -327,6 +331,7 @@ DEPENDENCIES
   spree_aftership!
   spree_auth_devise!
   spree_carrierwave
+  spree_mail_chimp
   spree_skrill
   spree_usa_epay
   therubyracer
