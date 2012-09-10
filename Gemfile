@@ -45,6 +45,9 @@ gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 gem 'spree_carrierwave'
 # gem 'spree_stripe', :git=>"git://github.com/adiastyle/spree-stripe.git"
 gem 'spree_aftership', :git => "git://github.com/AfterShip/spree_aftership.git"
-# gem 'spree_content_chunks'
+# gem 'spree_content_chunks' # only spree 0.70.x
 # gem 'whenever', :require => false      # if you want whenever to manage the cron job
 # gem 'spree_fulfillment', :git => 'git://github.com/wimm/spree_fulfillment.git'
+# gem 'spree_salecycle', :git => 'git://github.com/minustehbare/spree-salecycle.git'
+gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
+gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
