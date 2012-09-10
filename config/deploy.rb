@@ -4,10 +4,11 @@ require "bundler/capistrano"
 set :stages, %w(staging production)
 set :default_stage, "staging"
 require 'capistrano/ext/multistage'
+require "rvm/capistrano"
 # Load RVM's capistrano plugin.
 load "deploy/assets"
 
-set :rvm_ruby_string, 'ruby-1.9.3-p194@jire'
+set :rvm_ruby_string, 'ruby-1.9.3-p194@nearfive'
 #set :rvm_type, :deploy
 
 set :application,     "nearfive"
@@ -51,14 +52,14 @@ namespace :deploy do
   end
 
   task :seed, :roles => :db do
-    run("cd #{deploy_to}/current && /home/deploy/.rbenv/shims/rake db:seed RAILS_ENV=#{rails_env}")  
+    run("cd #{deploy_to}/current && /home/deploy/.rvm/gems/ruby-1.9.3-p194@global/bin/rake db:seed RAILS_ENV=#{rails_env}")  
   end
 
   namespace :assets do
     task :precompile, :roles => :web, :except => { :no_release => true } do
       from = source.next_revision(current_revision)
       if capture("cd #{latest_release} && #{source.local.log(from)} vendor/assets/ app/assets/ | wc -l").to_i > 0
-        run %Q{cd #{latest_release} && /home/deploy/.rbenv/shims/rake RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
+        run %Q{cd #{latest_release} && /home/deploy/.rvm/gems/ruby-1.9.3-p194@global/bin/rake RAILS_ENV=#{rails_env} #{asset_env} assets:precompile}
       else
         logger.info "Skipping asset pre-compilation because there were no asset changes"
       end
@@ -71,7 +72,7 @@ end
 desc "Run a task on a remote server. cap staging rake:invoke task=blah"  
 # run like: cap staging invoke_rake task=a_certain_task  
 task :invoke_rake do  
-  run("cd #{deploy_to}/current && /home/deploy/.rbenv/shims/rake #{ENV['task']} RAILS_ENV=#{rails_env}")  
+  run("cd #{deploy_to}/current && /home/deploy/.rvm/gems/ruby-1.9.3-p194@global/bin/rake #{ENV['task']} RAILS_ENV=#{rails_env}")  
 end  
 
 
