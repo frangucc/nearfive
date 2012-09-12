@@ -19,7 +19,7 @@ production:
 staging:
   <<: *DATABASE
   database: nearfive_staging
-  username:
+  username: 
   password:
 
 test:

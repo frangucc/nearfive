@@ -1,0 +1,24 @@
+keys: &KEYS
+  access_key_id: AKIAJSWT7MY44B6EV2TQ
+  secret_access_key: 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
+  max_file_size: 1048576000
+
+development:
+  <<: *KEYS
+  bucket: nearfive-development
+  acl: public-read
+
+production:
+  <<: *KEYS
+  bucket: nearfive
+  acl: public-read
+
+staging:
+  <<: *KEYS
+  bucket: nearfive-staging
+  acl: public-read
+
+test:
+  <<: *KEYS
+  bucket: nearfive-test
+  acl: public-read

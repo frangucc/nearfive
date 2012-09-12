@@ -11,7 +11,30 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120909103342) do
+ActiveRecord::Schema.define(:version => 20120910101113) do
+
+  create_table "aftership_trackings", :force => true do |t|
+    t.string   "tracking"
+    t.string   "email"
+    t.string   "order_number"
+    t.datetime "add_to_aftership"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  create_table "content_chunks", :force => true do |t|
+    t.string   "title"
+    t.text     "body"
+    t.string   "link"
+    t.string   "kind"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
+    t.string   "image_position"
+    t.datetime "created_at",         :null => false
+    t.datetime "updated_at",         :null => false
+  end
 
   create_table "spree_activators", :force => true do |t|
     t.string   "description"
@@ -537,8 +560,8 @@ ActiveRecord::Schema.define(:version => 20120909103342) do
     t.string   "persistence_token"
     t.string   "reset_password_token"
     t.string   "perishable_token"
-    t.integer  "sign_in_count",                        :default => 0, :null => false
-    t.integer  "failed_attempts",                      :default => 0, :null => false
+    t.integer  "sign_in_count",                         :default => 0,     :null => false
+    t.integer  "failed_attempts",                       :default => 0,     :null => false
     t.datetime "last_request_at"
     t.datetime "current_sign_in_at"
     t.datetime "last_sign_in_at"
@@ -547,14 +570,16 @@ ActiveRecord::Schema.define(:version => 20120909103342) do
     t.string   "login"
     t.integer  "ship_address_id"
     t.integer  "bill_address_id"
-    t.datetime "created_at",                                          :null => false
-    t.datetime "updated_at",                                          :null => false
-    t.string   "spree_api_key",          :limit => 48
+    t.datetime "created_at",                                               :null => false
+    t.datetime "updated_at",                                               :null => false
+    t.string   "spree_api_key",           :limit => 48
     t.string   "authentication_token"
     t.string   "unlock_token"
     t.datetime "locked_at"
     t.datetime "remember_created_at"
     t.datetime "reset_password_sent_at"
+    t.boolean  "is_mail_list_subscriber",               :default => false, :null => false
+    t.string   "mailchimp_subscriber_id"
   end
 
   add_index "spree_users", ["email"], :name => "email_idx_unique", :unique => true
