@@ -322,6 +322,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   execjs
   jquery-rails
+  mini_magick
   mysql2
   passenger
   rails (= 3.2.8)
