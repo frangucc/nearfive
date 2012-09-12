@@ -16,4 +16,4 @@
 public/assets/
 .sass-cache/
 config/database.yml
-
+public/uploads
