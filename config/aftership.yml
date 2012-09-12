@@ -1,0 +1,15 @@
+development:
+  consumer_key: 6b9daa7efaee069b3100fcd2f60d856deb3c1e1177e15716f2169f6ce95a1ced
+  consumer_secret: c296a6883708a222f939d6aa3bac4ee6c5d8173420bb12beb8e0fe767656772b
+
+test:
+  consumer_key: key
+  consumer_secret: secret
+
+staging:
+  consumer_key: 6b9daa7efaee069b3100fcd2f60d856deb3c1e1177e15716f2169f6ce95a1ced
+  consumer_secret: c296a6883708a222f939d6aa3bac4ee6c5d8173420bb12beb8e0fe767656772b
+
+production:
+  consumer_key: 6b9daa7efaee069b3100fcd2f60d856deb3c1e1177e15716f2169f6ce95a1ced
+  consumer_secret: c296a6883708a222f939d6aa3bac4ee6c5d8173420bb12beb8e0fe767656772b
