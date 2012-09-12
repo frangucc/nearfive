@@ -1,13 +1,15 @@
 #require "delayed/recipes"
 require './config/boot'
 require "bundler/capistrano"
-set :stages, %w(staging production)
-set :default_stage, "staging"
 require 'capistrano/ext/multistage'
 require "rvm/capistrano"
+
+set :stages, %w(staging production)
+set :default_stage, "staging"
+
 # require 'whenever/capistrano'
 # Load RVM's capistrano plugin.
-load "deploy/assets"
+# load "deploy/assets"
 
 set :rvm_ruby_string, 'ruby-1.9.3-p194@nearfive'
 #set :rvm_type, :deploy
