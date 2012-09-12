@@ -320,6 +320,7 @@ DEPENDENCIES
   active_shipping!
   capistrano
   coffee-rails (~> 3.2.1)
+  execjs
   jquery-rails
   mysql2
   passenger
