@@ -13,7 +13,7 @@ Spree.config do |config|
   # Example:
   # Uncomment to override the default site name.
   config.site_name = "NearFive"
-  if Rails.env.production?
+  if Rails.env.production? || Rails.env.staging?
     config.use_s3 = true
   	config.s3_access_key = ENV['S3_KEY'] || s3_credentials['access_key_id'],
   	config.s3_secret =     ENV['S3_SECRET'] || s3_credentials['secret_access_key']
