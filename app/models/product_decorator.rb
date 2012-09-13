@@ -3,9 +3,10 @@ Spree::Product.class_eval do
                     :meta_keywords, :price, :sku, :deleted_at, :prototype_id,
                     :option_values_hash, :on_hand, :weight, :height, :width, :depth,
                     :shipping_category_id, :tax_category_id, :product_properties_attributes,
-                    :variants_attributes, :taxon_ids, :option_type_ids
+                    :variants_attributes, :taxon_ids, :option_type_ids, :big_image
   
   def big_image?
+    big_image
   end
 
 end
