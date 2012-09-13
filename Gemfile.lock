@@ -33,6 +33,14 @@ GIT
       devise (~> 2.0.4)
       spree_core
 
+GIT
+  remote: git://github.com/spree/spree_i18n.git
+  revision: d9db05b31249d3bd6aaf48c1ee45196c79e3c8ae
+  specs:
+    spree_i18n (1.0.0)
+      i18n (~> 0.5)
+      spree (~> 1.1)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -312,6 +320,7 @@ DEPENDENCIES
   spree_active_shipping!
   spree_aftership!
   spree_auth_devise!
+  spree_i18n!
   spree_mail_chimp
   spree_skrill
   spree_usa_epay

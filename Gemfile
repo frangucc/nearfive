@@ -42,6 +42,7 @@ gem 'jquery-rails'
 gem 'spree', '1.2.0.rc2'
 gem 'spree_usa_epay'
 gem 'spree_skrill'
+gem 'spree_i18n', :git => 'git://github.com/spree/spree_i18n.git'
 gem 'spree_auth_devise', :git => 'git://github.com/spree/spree_auth_devise'
 # gem 'spree_carrierwave'
 # gem 'spree_stripe', :git=>"git://github.com/adiastyle/spree-stripe.git"
