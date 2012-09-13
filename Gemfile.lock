@@ -18,6 +18,13 @@ GIT
       json (>= 1.5.1)
 
 GIT
+  remote: git://github.com/paulelol/spree-stripe.git
+  revision: 78026c450a5a583edddf65160786ebc5d432b6cc
+  specs:
+    spree_stripe (0.10.1)
+      spree_core (>= 0.70.1)
+
+GIT
   remote: git://github.com/spree/spree_active_shipping
   revision: 867aa5912485aae37aeab4c8da862e660bb2fadb
   specs:
@@ -323,6 +330,7 @@ DEPENDENCIES
   spree_i18n!
   spree_mail_chimp
   spree_skrill
+  spree_stripe!
   spree_usa_epay
   therubyracer
   uglifier (>= 1.0.3)
