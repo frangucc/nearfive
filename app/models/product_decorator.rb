@@ -5,8 +5,5 @@ Spree::Product.class_eval do
                     :shipping_category_id, :tax_category_id, :product_properties_attributes,
                     :variants_attributes, :taxon_ids, :option_type_ids, :big_image
   
-  def big_image?
-    big_image
-  end
 
 end
