@@ -1,0 +1,7 @@
+<% flash[:notice] = nil %>
+<% if @errors.empty? %>
+  jQuery("form#subscribe-form input[type='email']").val('');
+  alert('<%= t("you_have_been_subscribed") %>');
+<% else %>
+  alert('ERROR: <%= @errors.join(' / ') %>');
+<% end %>
