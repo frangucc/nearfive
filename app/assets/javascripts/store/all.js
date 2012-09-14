@@ -9,6 +9,6 @@
 
 //= require store/spree_core
 //= require store/spree_promo
-
-//= require_tree .
 //= require store/spree_mail_chimp
+//= require store/mailchimp_subscribe
+//= require_tree .
