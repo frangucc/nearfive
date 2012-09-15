@@ -73,25 +73,42 @@
 
 <div class="product-show-right">
 
-  <div class="product-show-buy">
-    <%= form_for :order, :url => populate_orders_url do |f| %>
-    <%= f.submit 'I want one' %>
-    <span>$<%= @product.price %></span>
-    <% end %>
-  </div>
+  <%= form_for :order, :url => populate_orders_url do |f| %>
 
-  <p class="product-show-secure">Five and Tens payments are <a href="">safe and secure</a></p>
-
-  <div class="product-show-options">
-    <div class="product-show-options-links">
-      <a href="">Bulk Discount</a>
-      <a href="">Ask a Question</a>
+    <div class="product-show-buy">
+      <%= f.submit 'I want one' %>
+      <span>$<%= @product.price %></span>
     </div>
-    <section class="product-show-free-shipping">
-      <h1>Free Shipping!</h1>
-      <p>This item ships for free, can't beat that. Now can you? Need it sooner, we can do that.</p>
-    </section>
-  </div> <!-- .product-show-options -->
+
+    <p class="product-show-secure">Five and Tens payments are <a href="">safe and secure</a></p>
+
+    <div class="product-show-options">
+
+      <% if @product.has_variants? %>
+
+      <%= hidden_field_tag "quantity", 1 %>
+      <section class="product-show-variants">
+        <h1>Choose Variant</h1>
+        <select name="products[<%= @product.id %>]">
+          <% @product.variants.each do |variant| %>
+          <option value="<%= variant.id %>"><%= variant.options_text %></option>
+          <% end %>
+        </select>
+      </section>
+
+      <% end %>
+
+      <div class="product-show-options-links">
+        <a href="">Bulk Discount</a>
+        <a href="">Ask a Question</a>
+      </div>
+      <section class="product-show-free-shipping">
+        <h1>Free Shipping!</h1>
+        <p>This item ships for free, can't beat that. Now can you? Need it sooner, we can do that.</p>
+      </section>
+    </div> <!-- .product-show-options -->
+  
+  <% end %>
 
   <section class="product-show-related">
     <h1>More from Angelo Collaco</h1>
