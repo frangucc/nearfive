@@ -190,7 +190,7 @@ div.product-show-options {
   border-radius: 5px;
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.1);
   padding: 15px 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 div.product-show-options-links {
   text-align: center;
@@ -230,5 +230,49 @@ section.product-show-free-shipping {
   p {
     font-size: 13px;
     color: #505050;
+  }
+}
+
+section.product-show-related {
+  a.see-all, & > h1, article h1 {
+    font-family: Helvetica, Arial, sans-serif;
+  }
+
+  & > h1 {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 20px;
+    padding-left: 30px;
+    margin-bottom: 20px;
+  }
+
+  ul, li {
+    margin-bottom: 15px;
+    float: left;
+    width: 100%;
+  }
+  li:last-child {
+    margin-bottom: 5px;
+  }
+
+  article {
+    img {
+      float: left;
+      height: 42px;
+      width: 80px;
+      background: #eee;
+      border-radius: 5px;
+    }
+    h1 {
+      margin-left: 95px;
+      font-size: 13px;
+      line-height: 16px;
+      font-weight: normal;
+    }
+  }
+  a.see-all {
+    font-size: 13px;
+    display: block;
+    clear: both;
   }
 }
