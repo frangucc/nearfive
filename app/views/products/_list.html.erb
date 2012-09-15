@@ -3,7 +3,7 @@
   <li class="<%= cycle('', 'even') %>">
     <article>
       <%= link_to product do %>
-        <%= small_image(product, class: 'image') %>
+        <%= product_image(product, class: 'image') %>
         <h1><%= product.name %></h1>
         <p>$<%= product.price %></p>
       <% end %>
