@@ -39,8 +39,10 @@
 <div class="product-show-right">
 
   <div class="product-show-buy">
-    <a href="">I want one</a>
+    <%= form_for :order, :url => populate_orders_url do |f| %>
+    <%= f.submit 'I want one' %>
     <span>$5</span>
+    <% end %>
   </div>
 
   <p class="product-show-secure">Five and Tens payments are <a href="">safe and secure</a></p>
