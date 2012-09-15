@@ -1,0 +1,73 @@
+<div class="product-show-top">
+  <%= link_to 'Back', root_path %>
+</div>
+
+<div class="product-show-left">
+
+  <h1 class="product-show-title"><%= @product.name %></h1>
+
+  <div class="product-show-image">
+    <%= product_image(@product) %>
+    <% if @product.images.size > 1 %>
+    <div class="product-show-more-images">
+      <% @product.images.each do |image| %>
+      <%= link_to image_tag(i.attachment.url(:mini)), i.attachment.url(:product) %>
+      <% end %>
+    </div>
+    <% end %>
+    <p class="product-show-favorite">67 People Love Myriah</p>
+  </div> <!-- .product-show-image -->
+
+  <div class="product-show-description">
+
+    <div class="product-show-share">
+    </div> <!-- .product-show-share -->
+
+    <div class="product-show-description-text">
+      <h1>Mobile oil change at your home or office</h1>
+      <%= @product.description %>
+    </div>
+  </div> <!-- product-show-description -->
+
+  <div class="product-show-place-order">
+    <p class="new">This listing is brand spankin' new!</p>
+    <a class="order" href="#">Place Order <span>$99</span></a>
+  </div>
+
+</div> <!-- .product-show-left -->
+
+<div class="product-show-right">
+
+  <div class="product-show-buy">
+    <a href="">I want one</a>
+    <span>$5</span>
+  </div>
+
+  <p class="product-show-secure">Five and Tens payments are <a href="">safe and secure</a></p>
+
+  <div class="product-show-options">
+    <div class="product-show-options-links">
+      <a href="">Bulk Discount</a>
+      <a href="">Ask a Question</a>
+    </div>
+    <section class="product-show-free-shipping">
+      <h1>Free Shipping!</h1>
+      <p>This item ships for free, can't beat that. Now can you? Need it sooner, we can do that.</p>
+    </section>
+  </div> <!-- .product-show-options -->
+
+  <section class="product-show-related">
+    <h1>More from Angelo Collaco</h1>
+    <ul>
+      <li>
+        <article>
+          <img src="" />
+          <h1><a href="">Replace worn brakes</a></h1>
+          <p>for $220</p>
+        </article>
+      </li>
+    </ul>
+    <a class="see-all" href="">See all 7 items from Angelo Colleco</a>
+  </section> <!-- .product-show-related -->
+
+</div> <!-- .product-show-right -->
