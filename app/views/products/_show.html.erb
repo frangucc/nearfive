@@ -7,11 +7,11 @@
   <h1 class="product-show-title"><%= @product.name %></h1>
 
   <div class="product-show-image">
-    <%= product_image(@product) %>
+    <%= product_image(@product, class: 'main', width: '100%') %>
     <% if @product.images.size > 1 %>
     <div class="product-show-more-images">
       <% @product.images.each do |image| %>
-      <%= link_to image_tag(i.attachment.url(:mini)), i.attachment.url(:product) %>
+      <%= link_to image_tag(image.attachment.url(:mini)), image.attachment.url(:product) %>
       <% end %>
     </div>
     <% end %>
@@ -21,11 +21,46 @@
   <div class="product-show-description">
 
     <div class="product-show-share">
+
+      <div class="product-show-share-facebook">
+        <div class="fb-like" data-send="false" data-layout="button_count" data-width="120" data-show-faces="false"></div>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/es_LA/all.js#xfbml=1&appId=351277491621476";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
+      </div> <!-- .facebook -->
+
+      <div class="product-show-share-twitter">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+      </div> <!-- .twitter -->
+
+      <div class="product-show-share-google">
+        <!-- Place this tag where you want the +1 button to render. -->
+        <div class="g-plusone"></div>
+        <!-- Place this tag after the last +1 button tag. -->
+        <script type="text/javascript">
+          (function() {
+            var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+            po.src = 'https://apis.google.com/js/plusone.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(po, s);
+          })();
+        </script>
+      </div> <!-- .google -->
+
+      <div class="product-show-share-pinterest">
+        <a href="http://pinterest.com/pin/create/button/?url=PRODUCT_URL_HERE&media=PRODUCT_IMAGE_HERE&description=PRODUCT_DESCRIPTION_HERE" class="pin-it-button" count-layout="horizontal"><img border="0" src="//assets.pinterest.com/images/PinExt.png" title="Pin It" /></a>
+      </div> <!-- .pinterest -->
+
     </div> <!-- .product-show-share -->
 
     <div class="product-show-description-text">
       <h1>Mobile oil change at your home or office</h1>
-      <%= @product.description %>
+      <p><%= @product.description %></p>
     </div>
   </div> <!-- product-show-description -->
 
@@ -41,7 +76,7 @@
   <div class="product-show-buy">
     <%= form_for :order, :url => populate_orders_url do |f| %>
     <%= f.submit 'I want one' %>
-    <span>$5</span>
+    <span>$<%= @product.price %></span>
     <% end %>
   </div>
 
