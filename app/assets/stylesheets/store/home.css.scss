@@ -1,0 +1,52 @@
+ul.home-products {
+  li {
+    float: left;
+    width: 48%;
+    margin-right: 4%;
+
+    &.even {
+      margin-right: 0;
+    }
+
+    article {
+      border-radius: 5px;
+      float: left;
+      width: 100%;
+      border: 1px solid #e0e0e0;
+      margin-bottom: 30px;
+      box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+
+      img {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        width: 100%;
+        float: left;
+      }
+
+      h1, p {
+        line-height:  50px;
+        font-family: Helvetica, Arial, sans-serif;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+      }
+
+      h1 {
+        float: left;
+        padding-left: 20px;
+        width: 50%;
+        color: #3f3f3f;
+        font-weight: normal;
+      }
+
+      p {
+        float: right;
+        padding-right: 20px;
+        font-size: 28px;
+        width: 30%;
+        text-align: right;
+        color: #000;
+      }
+    }
+  }
+}
