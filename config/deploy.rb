@@ -6,6 +6,7 @@ require "rvm/capistrano"
 
 set :stages, %w(staging production)
 set :default_stage, "staging"
+ssh_options[:paranoid] = false 
 
 # require 'whenever/capistrano'
 # Load RVM's capistrano plugin.
