@@ -9,7 +9,7 @@ div#header, div#wrapper, div#footer div.center {
 }
 
 div#header {
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 
   div.blue {
     border-bottom-left-radius: 10px;
@@ -124,11 +124,37 @@ div#header {
 aside#sidebar {
   float: left;
   width: 200px;
+  padding-left: 20px;
+
+  h6.taxonomy-root {
+    font-size: 18px;
+    font-family: Helvetica, Arial, sans-serif;
+    margin-bottom: 15px;
+    color: #505050;
+    border: 0;
+    text-transform: none;
+  }
+  ul.taxons-list {
+    padding-left: 10px;
+
+    li {
+      list-style: none;
+      font-family: Helvetica, Arial, sans-serif;
+
+      a {
+        display: block;
+        font-size: 13px;
+        color: #000;
+        line-height: 40px;
+        border-bottom: 1px solid #e0e0e0;
+      }
+    }
+  }
 } /* aside#sidebar */
 
 div#content {
   float: right;
-  width: 750px;
+  width: 700px;
 } /* div#content */
 
 div#footer {
