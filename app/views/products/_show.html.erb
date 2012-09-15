@@ -11,7 +11,7 @@
     <% if @product.images.size > 1 %>
     <div class="product-show-more-images">
       <% @product.images.each do |image| %>
-      <%= link_to image_tag(image.attachment.url(:mini)), image.attachment.url(:product) %>
+      <%= link_to image_tag(image.attachment.url(:mini), height: 42), image.attachment.url(:product) %>
       <% end %>
     </div>
     <% end %>
