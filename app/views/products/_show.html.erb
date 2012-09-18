@@ -113,24 +113,14 @@
   <section class="product-show-related">
     <h1>More from Angelo Collaco</h1>
     <ul>
-      <li>
-        <article>
-          <img src="" />
-          <h1><a href="">Replace worn brakes</a> for $200</h1>
-        </article>
-      </li>
-      <li>
-        <article>
-          <img src="" />
-          <h1><a href="">Replace worn brakes</a> for $200</h1>
-        </article>
-      </li>
-      <li>
-        <article>
-          <img src="" />
-          <h1><a href="">Replace worn brakes</a> for $200</h1>
-        </article>
-      </li>
+      <% @product.relatives.each do |prod|%>
+        <li>
+          <article>
+            <%= product_image(prod, class: 'image') %>
+            <h1><a href=""><%= prod.name %></a> for <%= number_to_currency(prod.price) %></h1>
+          </article>
+        </li>
+      <% end %>
     </ul>
     <a class="see-all" href="">See all 7 items from Angelo Colleco</a>
   </section> <!-- .product-show-related -->

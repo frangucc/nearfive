@@ -6,4 +6,9 @@ Spree::Product.class_eval do
                     :variants_attributes, :taxon_ids, :option_type_ids, :big_image
   
 
+  def relatives
+  	searcher = Spree::Config.searcher_class.new({})
+		searcher.retrieve_products.where("spree_products.id <> ?", self.id).limit(4)
+  end
+  
 end
