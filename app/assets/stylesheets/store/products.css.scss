@@ -2,6 +2,12 @@ div.product-show-top {
   float: left;
   width: 100%;
   margin-bottom: 10px;
+
+  a {
+    color: #003566;
+    font-family: Museo500, Helvetica, Arial, sans-serif;
+    font-size: 15px;
+  }
 }
 div.product-show-left {
   float: left;
@@ -14,11 +20,11 @@ div.product-show-right {
 
 h1.product-show-title {
   font-size: 30px;
-  line-height: 34px;
+  line-height: 38px;
   font-weight: normal;
   color: #000;
-  margin-bottom: 20px;
-  font-family: Helvetica, Arial, sans-serif;
+  margin-bottom: 15px;
+  font-family: Museo700, Helvetica, Arial, sans-serif;
 }
 
 div.product-show-image {
@@ -64,7 +70,7 @@ div.product-show-description {
   width: 94%;
   padding: 20px 3%;
   border-radius: 7px;
-  background: #f8f8f8;
+  background: #eff1f2;
   margin-bottom: 20px;
 }
 div.product-show-share {
@@ -90,11 +96,12 @@ div.product-show-description-text {
     font-size: 18px;
     margin-bottom: 7px;
     line-height: 22px;
+    color: #383838;
   }
   p {
     font-size: 13px;
     line-height: 22px;
-    color: #505050;
+    color: #75736b;
   }
 }
 
@@ -184,21 +191,20 @@ div.product-show-options {
   border: 1px solid #e0e0e0;
   border-radius: 5px;
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.1);
-  padding: 15px 12px;
+  padding: 20px 12px;
   margin-bottom: 30px;
 }
 
 section.product-show-variants {
   margin-bottom: 20px;
 
-  h1, option {
-    font-family: Helvetica, Arial, sans-serif;
-  }
   h1 {
-    font-size: 16px;
+    font-size: 17px;
+    color: #000;
     font-weight: normal;
     line-height: 20px;
-    margin-bottom: 5px;
+    margin-bottom: 10px;
+    font-family: Museo300, Helvetica, Arial, sans-serif;
   }
   select {
     box-sizing: border-box;
@@ -206,6 +212,7 @@ section.product-show-variants {
     width: 100%;
     padding: 10px;
     height: 40px;
+    font-family: Helvetica, Arial, sans-serif;
   }
 }
 

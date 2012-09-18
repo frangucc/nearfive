@@ -25,14 +25,15 @@ ul.home-products {
 
       h1, p {
         line-height:  50px;
-        font-family: Helvetica, Arial, sans-serif;
         white-space: nowrap;
         text-overflow: ellipsis;
         overflow: hidden;
+        font-family: Museo700, Helvetica, Arial, sans-serif;
       }
 
       h1 {
         float: left;
+        font-size: 18px;
         padding-left: 20px;
         width: 50%;
         color: #3f3f3f;
@@ -42,7 +43,7 @@ ul.home-products {
       p {
         float: right;
         padding-right: 20px;
-        font-size: 28px;
+        font-size: 32px;
         width: 30%;
         text-align: right;
         color: #000;

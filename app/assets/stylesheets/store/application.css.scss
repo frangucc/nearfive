@@ -7,6 +7,20 @@
        url('/fonts/museo700.woff') format('woff'), /* Modern Browsers */
        url('/fonts/museo700.ttf')  format('truetype'); /* Safari, Android, iOS */
 }
+@font-face {
+  font-family: 'Museo500';
+  src: url('/fonts/museo500.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/museo500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/museo500.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/museo500.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
+@font-face {
+  font-family: 'Museo300';
+  src: url('/fonts/museo300.eot'); /* IE9 Compat Modes */
+  src: url('/fonts/museo300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/museo300.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/museo300.ttf')  format('truetype'); /* Safari, Android, iOS */
+}
 
 .orange-button {
   color: #fff;
@@ -183,7 +197,7 @@ div#header {
   p.legend {
     text-align: center;
     font-size: 28px;
-    font-family: Museo700, Helvetica, Arial, sans-serif;
+    font-family: Museo500, Helvetica, Arial, sans-serif;
     font-weight: normal;
     line-height: 60px;
     border-radius: 10px;
@@ -244,12 +258,18 @@ div#footer {
 
     h1, a {
       display: inline-block;
-      font-size: 28px;
-      font-weight: normal;
-      font-family: Helvetica, Arial, sans-serif;
       line-height: 50px;
     }
+    h1 {
+      font-family: Museo500, Helvetica, Arial, sans-serif;
+      color: #000;
+      font-size: 28px;
+      font-weight: normal;
+    }
     a {
+      font-weight: bold;
+      font-size: 26px;
+      font-family: Helvetica, Arial, sans-serif;
       border-radius: 7px;
       border: 1px solid #ce432e;
       padding: 0 25px;
