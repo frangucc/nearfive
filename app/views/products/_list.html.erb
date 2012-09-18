@@ -3,7 +3,9 @@
   <li class="<%= cycle('', 'even') %>">
     <article>
       <%= link_to product do %>
-        <i>Free Shipping</i>
+        <% if product.is_free_shipping %>
+          <i>Free Shipping</i>
+        <% end %>
         <%= product_image(product, class: 'image') %>
         <h1><%= product.name %></h1>
         <% if product.is_free_shipping %>
