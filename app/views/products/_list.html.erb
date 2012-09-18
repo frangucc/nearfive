@@ -3,9 +3,13 @@
   <li class="<%= cycle('', 'even') %>">
     <article>
       <%= link_to product do %>
+        <i>Free Shipping</i>
         <%= product_image(product, class: 'image') %>
         <h1><%= product.name %></h1>
-        <p>$<%= product.price %></p>
+        <% if product.is_free_shipping %>
+        <% end %>
+        <p>
+          <%= number_to_currency(product.price, :precision => 1) %></p>
       <% end %>
     </article>
   </li>

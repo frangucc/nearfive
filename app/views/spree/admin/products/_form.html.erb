@@ -83,6 +83,12 @@
         <%= f.error_message_on :tax_category %>
       <% end %>
 
+      <%= f.field_container :is_free_shipping do %>
+        <%= f.check_box :is_free_shipping %>
+        <%= f.label :is_free_shipping, "Free Shipping?" %>
+        <%= f.error_message_on :is_free_shipping %>
+      <% end %>
+
       <%= f.field_container :big_image do %>
         <%= f.check_box :big_image %>
         <%= f.label :big_image, "Display Big Image In List Page?" %>
