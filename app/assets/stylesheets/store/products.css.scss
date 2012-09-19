@@ -205,6 +205,79 @@ div.product-show-options {
   box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.1) inset, 0 0 2px rgba(0, 0, 0, 0.1);
   padding: 20px 12px;
   margin-bottom: 30px;
+
+  a.custom-select {
+    display: block;
+    outline: 0;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    height: 40px;
+    font-family: Helvetica, Arial, sans-serif;
+    position: relative;
+  }
+  span.custom-select-display {
+    float: left;
+    width: 165px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    font-size: 13px;
+    color: #202020;
+    padding-left: 15px;
+    line-height: 40px;
+  }
+  span.custom-select-handle {
+    float: right;
+    height: 40px;
+    width: 45px;
+    background: url(/assets/arrow-down.png) no-repeat center center;
+    border-left: 1px solid #cfcfcf;
+  }
+  ul.custom-select-optionlist {
+    position: absolute;
+    left: -1px;
+    top: 45px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #cfcfcf;
+    width: 100%;
+
+    li {
+      font-size: 13px;
+      color: #202020;
+      padding: 0 15px;
+      line-height: 40px;
+
+      &:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+      }
+
+      &:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+      }
+
+      &.selected {
+        background: #198aca;
+        color: #fff;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+      }
+    }
+
+    &:hover li.selected {
+      background: none;
+      color: #000;
+      text-shadow: none;
+    }
+    &:hover li:hover {
+      background: #198aca;
+      color: #fff;
+      text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2);
+    }
+  }
 }
 
 section.product-show-variants {
