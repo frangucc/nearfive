@@ -6,7 +6,7 @@
         <% if product.is_free_shipping %>
           <i>Free Shipping</i>
         <% end %>
-        <%= product_image(product, class: 'image') %>
+        <%= product_image(product, class: 'image', height: 260) %>
         <h1><%= product.name %></h1>
 
         <% if product.is_free_shipping %>
