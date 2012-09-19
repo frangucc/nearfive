@@ -13,7 +13,10 @@ var InfiniteProductList = (function () {
     // handle viewport scroll.
     // when into the threshold, start loading more products.
     wind.scroll(function () {
-      if (wind.scrollTop() >= threshold && !loading) {
+      // if under the threshold
+      // if not still loading
+      // if not hit the last page already
+      if (wind.scrollTop() >= threshold && !loading && !lastPage) {
         getNextPage();
       }
     });
@@ -74,6 +77,7 @@ var InfiniteProductList = (function () {
       }
       else {
         // show "no more results" message
+        lastPage = true;
       }
     }
 
