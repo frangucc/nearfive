@@ -102,10 +102,12 @@
         <a href="">Bulk Discount</a>
         <a href="">Ask a Question</a>
       </div>
+      <% if @product.is_free_shipping %>
       <section class="product-show-free-shipping">
         <h1>Free Shipping!</h1>
         <p>This item ships for free, can't beat that. Now can you? Need it sooner, we can do that.</p>
       </section>
+      <% end %>
     </div> <!-- .product-show-options -->
   
   <% end %>

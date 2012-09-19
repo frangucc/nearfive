@@ -230,8 +230,6 @@ section.product-show-variants {
 
 div.product-show-options-links {
   text-align: center;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e0e0e0;
 
   a {
     font-family: Helvetica, Arial, sans-serif;
@@ -253,6 +251,8 @@ div.product-show-options-links {
 section.product-show-free-shipping {
   padding-left: 100px;
   padding-top: 20px;
+  margin-top: 20px;
+  border-top: 1px solid #e0e0e0;
   background: url(/assets/free-shipping-box.png) no-repeat 10px 20px;
 
   h1, p {
