@@ -13,9 +13,13 @@
     </div>
 
     <section class="cart">
-      <h1>Cart:</h1>
-      <p class="qty">2</p>
-      <p class="total">$10.00</p>
+      <%= link_to cart_path do %>
+        <h1>Cart:</h1>
+        <p class="qty"><%= current_order.nil? ? 0 : current_order.item_count %></p>
+        <% unless current_order.nil? || current_order.line_items.empty? %>
+        <p class="total">$10.00</p>
+        <% end %>
+      <% end %>
     </section>
   </div>
   

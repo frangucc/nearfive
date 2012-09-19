@@ -75,6 +75,8 @@
 
   <%= form_for :order, :url => populate_orders_url do |f| %>
 
+    <%= hidden_field_tag (@product.has_variants? ? :quantity : "variants[#{@product.master.id}]"), 1 %>
+
     <div class="product-show-buy">
       <%= f.submit 'I want one' %>
       <span><%= number_to_currency(@product.price, precision: 0) %></span>
@@ -85,8 +87,6 @@
     <div class="product-show-options">
 
       <% if @product.has_variants? %>
-
-      <%= hidden_field_tag "quantity", 1 %>
       <section class="product-show-variants">
         <h1>Choose Variant</h1>
         <select name="products[<%= @product.id %>]">
