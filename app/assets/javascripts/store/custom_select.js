@@ -25,16 +25,6 @@ var CustomSelect = (function () {
     select
       .click(function () {
         return false;
-      })
-      .focus(function () {
-        select.addClass('focused');
-        showOptionList();
-        catchUpDownKeys();
-      })
-      .blur(function () {
-        select.removeClass('focused');
-        hideOptionList();
-        releaseUpDownKeys();
       });
 
     handle.add(display)
