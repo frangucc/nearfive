@@ -8,10 +8,11 @@
         <% end %>
         <%= product_image(product, class: 'image') %>
         <h1><%= product.name %></h1>
+
         <% if product.is_free_shipping %>
         <% end %>
-        <p>
-          <%= number_to_currency(product.price, :precision => 1) %></p>
+
+        <p><%= number_to_currency(product.price, :precision => 0) %></p>
       <% end %>
     </article>
   </li>

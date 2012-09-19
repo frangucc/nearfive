@@ -77,7 +77,7 @@
 
     <div class="product-show-buy">
       <%= f.submit 'I want one' %>
-      <span>$<%= @product.price %></span>
+      <span><%= number_to_currency(@product.price, precision: 0) %></span>
     </div>
 
     <p class="product-show-secure">Five and Tens payments are <a href="">safe and secure</a></p>
