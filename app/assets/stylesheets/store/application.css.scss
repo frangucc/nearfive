@@ -56,7 +56,7 @@
 }
 
 body {
-  background: url(/assets/body-bg.png) repeat-x !important;
+  background: url(/assets/body-bg.jpg) repeat-x !important;
 }
 
 div.nf-container {
@@ -196,21 +196,22 @@ div#header {
 
   p.legend {
     text-align: center;
-    font-size: 28px;
+    font-size: 29px;
     font-family: Museo500, Helvetica, Arial, sans-serif;
     font-weight: normal;
-    line-height: 60px;
+    line-height: 64px;
+    height: 60px;
     border-radius: 10px;
     border: 1px solid #d0e4e3;
     background: url(/assets/header-legend-bg.png);
+    color: #000;
   }
 
 } /* div#header */
 
 aside#sidebar {
   float: left;
-  width: 200px;
-  padding-left: 20px;
+  width: 216px;
 
   h6.taxonomy-root {
     font-size: 18px;
@@ -219,9 +220,12 @@ aside#sidebar {
     color: #363636;
     border: 0;
     text-transform: none;
+    padding-left: 17px;
   }
   ul.taxons-list {
-    padding-left: 10px;
+    padding-left: 30px;
+    padding-bottom: 21px;
+    background: url(/assets/border-bottom.jpg) no-repeat right bottom;
 
     li {
       list-style: none;

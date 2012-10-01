@@ -1,3 +1,5 @@
+<style>#header p.legend { display: none; }</style>
+
 <div class="product-show-top">
   <%= link_to 'Back', root_path %>
 </div>
@@ -7,7 +9,11 @@
   <h1 class="product-show-title"><%= @product.name %></h1>
 
   <div class="product-show-image">
-    <%= product_image(@product, class: 'main', width: '100%') %>
+
+    <div class="product-show-image-frame">
+      <%= product_image(@product, class: 'main', width: '100%') %>
+    </div>
+
     <% if @product.images.size > 1 %>
     <div class="product-show-more-images">
       <% @product.images.each do |image| %>
@@ -131,4 +137,42 @@
 
 <script>
   $('div.product-show-options select').customSelect();
+
+  function onImgLoad() {
+    currImg.fadeOut('slow', function () {
+      $(this)
+        .remove();
+
+      newImg
+        .hide()
+        .appendTo(frame)
+        .fadeIn();
+    })
+  }
+
+  var smallImgs = $('div.product-show-more-images a')
+    , frame = $('.product-show-image-frame')
+    , currImg, newImg;
+
+  smallImgs.filter(':eq(0)').addClass('active');
+
+  smallImgs.click(function () {
+    smallImgs.removeClass('active');
+    $(this).addClass('active');
+
+    currImg = frame.find('img');
+    newImg = $('<img />').attr({
+      src: $(this).attr('href'),
+      width: '100%'
+    });
+
+    if (newImg.get(0).complete) {
+      onImgLoad();
+    }
+    else {
+      newImg.load(function () { onImgLoad() });
+    }
+
+    return false;
+  });
 </script>
