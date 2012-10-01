@@ -65,7 +65,7 @@
     </div> <!-- .product-show-share -->
 
     <div class="product-show-description-text">
-      <h1>Mobile oil change at your home or office</h1>
+      <h1><%= @product.name %></h1>
       <p><%= @product.description %></p>
     </div>
   </div> <!-- product-show-description -->
@@ -118,6 +118,7 @@
   
   <% end %>
 
+  <% if false %>
   <section class="product-show-related">
     <h1>More from Angelo Collaco</h1>
     <ul>
@@ -132,6 +133,7 @@
     </ul>
     <a class="see-all" href="">See all 7 items from Angelo Colleco</a>
   </section> <!-- .product-show-related -->
+  <% end %>
 
 </div> <!-- .product-show-right -->
 
