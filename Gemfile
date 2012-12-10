@@ -54,3 +54,7 @@ gem 'spree_aftership', :git => "git://github.com/AfterShip/spree_aftership.git"
 gem 'active_shipping', :git => "git://github.com/Shopify/active_shipping"
 gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shipping"
 gem 'spree_mail_chimp'
+
+group :development, :test do
+	gem 'heroku'
+end
