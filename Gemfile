@@ -21,6 +21,7 @@ group :assets do
   gem 'therubyracer'
 	gem 'execjs'
   gem 'uglifier', '>= 1.0.3'
+  gem 'libv8'
 end
 
 gem 'jquery-rails'
@@ -56,5 +57,8 @@ gem 'spree_active_shipping', :git => "git://github.com/spree/spree_active_shippi
 gem 'spree_mail_chimp'
 
 group :development, :test do
-	gem 'heroku'
+end
+
+group :production do
+	gem 'pg'
 end
